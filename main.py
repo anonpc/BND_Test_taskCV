@@ -5,6 +5,14 @@ import torch
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 def detect_and_draw(video_path, output_path):
+    """
+    Функция detect_and_draw выполняет распознавание людей на видео и сохраняет отрисованные результаты.
+    
+    Параметры:
+    video_path (str): Путь к исходному видео.
+    output_path (str): Путь для сохранения выходного видео.
+    """
+    
     # Открытие видеофайла
     cap = cv2.VideoCapture(video_path)
     # Параметры для сохранения видео
